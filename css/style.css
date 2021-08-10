@@ -1,0 +1,219 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+.page {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* font-family: 'ZCOOL KuaiLe', cursive; */
+body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-weight: 400;
+    font-size: 100%;
+    color:#5e5e5e;
+}
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    font-family: 'Montserrat', sans-serif;
+}
+.header__top {
+    background:#303030;
+}
+.header__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone__icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    fill:#ffc22f;
+    padding-right:10px;
+  
+}
+.phone__tel {
+    
+    color:#ebcacb;
+    letter-spacing: 0.25px;
+    position: relative;
+    text-decoration: none;
+}
+.header__vk {
+    padding:5px 5px;
+}
+.icon-vk {
+    display: block;
+    width: 40px;
+    height: 40px;
+    fill:#ffc22f;
+    
+}
+.icon-youtube{
+    display: block;
+    width: 40px;
+    height: 40px;
+    fill:#d40d1d;
+}
+
+.advice-btn {
+    color:#fff;
+    background-color:#ffc22f;
+    padding: 5px;
+    font-size: 18px;
+}
+.header__content-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    display:block;
+    font-size: 23px;
+    color: rgb(11, 139, 64);
+    text-decoration: none;
+    font-weight:700;
+    padding: 5px;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__link {
+    display: block;
+    color: black;
+    padding-left: 10px;
+    color: rgb(11, 139, 64);
+    text-decoration: none;
+    font-weight:700;
+    transition:  all 0.3s;
+}
+.menu__link:hover {
+    color: #d40d1d;
+}
+.burger {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    top: 33px;
+    right: 18px;
+    display: none;
+}
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:(0,0,0,0.5);
+    z-index: 99;
+    opacity: 1 ;
+    visibility: hidden;
+}
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transition:  all 0.3s;
+}
+.menu.open {
+    transform: translateX(0);
+    transition: all 0.3s;
+}
+/* intro */
+.intro {
+    background-image:url('./../img/fone.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+.intro__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 870px;
+    position: relative;
+  
+}
+.intro__suptitle{
+margin-top: 10px;
+color: #fff;
+font-size: 60px;
+font-family: 'ZCOOL KuaiLe', cursive;
+}
+.intro__title {
+color: #fff;
+font-size: 90px;
+font-weight: 600;
+}
+.descrip {
+   color: #fff;
+   min-width: 700px;
+   font-size: 25px;
+   font-weight: bolder;
+}
+@media(max-width:990px) {
+    .intro__suptitle {
+        font-size: 40px;
+    }
+    .intro__title {
+        font-size: 60px;
+    }
+}
+@media(max-width:560px) {
+    .header__contacts {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0 10px 0;
+    }
+    .burger {
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        left: 0;
+        top: 0;
+        max-width: 400px;
+        width: 60%;
+        height: 30%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+        box-shadow:5px 0 15px rgba(0,0,0, 0.8);
+        top:214px;
+        transform:translateX(-150vw);
+        overflow-x: hidden;
+        overflow-x: auto;
+    }
+    .menu__link {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+}
