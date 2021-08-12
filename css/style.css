@@ -182,10 +182,12 @@ font-weight: 600;
    font-weight: bolder;
 }
 /* .features */
-.features {
+/* .features {
+} */
+.features__inner {
     display: flex;
     flex-wrap: wrap;
-    margin: 95px;
+    /* margin: 95px; */
 }
 .features__item{
     width: 33.3333%;
@@ -202,7 +204,7 @@ font-weight: 600;
     font-weight: bolder;
 }
 .features__icon {
-    width: 60px;
+    width: 50px;
     display: block;
     position: absolute;
     left: 0;
