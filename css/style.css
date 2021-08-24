@@ -239,6 +239,9 @@ font-weight: 600;
     align-items: center;
     width: 50%;
 }
+.about__text{
+    text-align: center;
+}
 .social {
     display: flex;
     margin-bottom: 40px;
@@ -256,7 +259,7 @@ font-weight: 600;
     width: 50px;
 }
 .social__icon-vk {
-    fill:#3a3e64;
+    fill:#d2ed12;
 }
 .social__icon-youtube{
     fill:#d40d1d
@@ -320,6 +323,7 @@ font-weight: 600;
 .slideshow__img {
     vertical-align: middle;
     max-width: 100%;
+    width: 500px;
 }
 
 @keyframes fade {
@@ -389,7 +393,7 @@ font-weight: 600;
 .card {
     margin-bottom:15px;
     background: #fff;
-    max-width: 540px;
+    width: 33.33333%;
     box-shadow: 0 10px 40px rgba(126,155,189,0.35);
     transition: transform 0.2s ease-in; /* liner */
 }
@@ -403,7 +407,7 @@ font-weight: 600;
 .card__img {
     max-width: 100%;
     margin-bottom: 20px;
-    /* width: 400px; */
+   width: 300px;
 }
 .card__title {
     margin: 0;
