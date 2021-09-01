@@ -118,5 +118,26 @@
        
     }
 
+// filter
+{
+  const buttons = document.querySelectorAll('.works__nav-link');
+  // console.log(buttons);
+  const cardItem = document.querySelectorAll('.works__col');
+  // console.log(cardItem);
 
+  function filter(category,item){
+   item.forEach(elem=>{
+     const isFilterNot = !elem.classList.contains(category);
+     console.log(isFilterNot);
+   })
+  }
+
+  buttons.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      // console.log(btn.dataset.filter);
+      const getFilter = btn.dataset.filter;
+      filter(getFilter,cardItem)
+    })
+  })
+}
     

@@ -180,6 +180,30 @@ body {
     visibility: visible;
     transition:  all 0.3s;
 }
+.hide {
+    animation-name:hide;
+    animation-duration:.5s;
+    animation-fill-mode: forwards
+}
+/* .animete {
+    transform:scale(0);
+    opacity: 0;
+}
+@keyframes hide {
+    0% {
+        visibility: visible;
+        height: 200px;
+    }
+    100% {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        max-width: 0;
+        font-size: 0;
+        margin: 0;
+        p0
+    }
+} */
 .menu.open {
     transform: translateX(0);
     transition: all 0.3s;
@@ -225,7 +249,7 @@ font-weight: 600;
 }
 /* .works */
 .works{
-    margin: 2.8rem;
+    margin:auto;
     width: 100%;
 }
 .works__nav {
@@ -249,6 +273,9 @@ font-weight: 600;
 .works__col {
     flex-basis: 33.33333%;
     margin: 1rem 0 1rem 0;
+}
+.works__img {
+    max-width: 100%;
 }
 
 /* about */
@@ -436,7 +463,7 @@ font-weight: 600;
 .card__img {
     max-width: 100%;
     margin-bottom: 20px;
-   width: 300px;
+   
 }
 .card__title {
     margin: 0;
@@ -566,7 +593,7 @@ font-weight: 600;
         font-size: 20px;
     }
     .portfolio {
-        padding: 40px 60px;
+        padding: 8px 18px;
     }
     .portfolio__header {
         font-size: 32px;
