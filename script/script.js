@@ -120,24 +120,35 @@
 
 // filter
 {
-  const buttons = document.querySelectorAll('.works__nav-link');
-  // console.log(buttons);
-  const cardItem = document.querySelectorAll('.works__col');
-  // console.log(cardItem);
+  const buttons = document.querySelectorAll('.button'); //1
+    const cardItem = document.querySelectorAll('.works__col') //5 
 
-  function filter(category,item){
-   item.forEach(elem=>{
-     const isFilterNot = !elem.classList.contains(category);
-     console.log(isFilterNot);
-   })
-  }
+    function filter(category, item) { //4
+        item.forEach((item) => { //6
+            const getFiltrCard = !item.classList.contains(category); //7,8
+            const isShowAll = category.toLowerCase() === 'all';//13
+            if (getFiltrCard && !isShowAll) {//9,14 если карточка должна быть отфильтрована и пользователь не нажал на all тогда мы что-то скрываем
+                item.classList.add('animete')
+            } else {
+                item.classList.remove('hide');
+                item.classList.remove('animete');
+            }
+        })
+    }
+    buttons.forEach((btn) => { //2
+        btn.addEventListener('click', () => {
+            const currentCategory  = btn.dataset.filter//10 
+            filter(currentCategory,cardItem);//11 
+           
+        });
+    });
 
-  buttons.forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      // console.log(btn.dataset.filter);
-      const getFilter = btn.dataset.filter;
-      filter(getFilter,cardItem)
+    cardItem.forEach(card=>{//15
+        card.ontransitionend = function(){//16
+            if(card.classList.contains('anime')) {//17
+                card.classList.add('hide')//18
+            }
+        }
     })
-  })
 }
     
