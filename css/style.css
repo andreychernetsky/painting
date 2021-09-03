@@ -201,7 +201,7 @@ body {
         max-width: 0;
         font-size: 0;
         margin: 0;
-        p0
+        padding: 0; 
     }
 }
 .menu.open {
@@ -445,8 +445,8 @@ font-weight: 600;
 /* portfolio */
 .portfolio {
     /* background:rgb(188, 187, 143); */
-    padding-top: 80px;
-    padding-bottom: 115px;
+    padding-top: 64px;
+    padding-bottom: 75px;
 }
 .portfolio__header {
     margin: 0;
@@ -489,6 +489,9 @@ font-weight: 600;
      font-size: 24px;
      line-height: 130%;
      /* color: #000; */
+}
+.card__descrip {
+    font-size: 14px;
 }
 .card__link {
     display: block;
